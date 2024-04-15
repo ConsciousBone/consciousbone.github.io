@@ -50,7 +50,7 @@ p {
   margin-bottom: 10px; /* Added margin below buttons */
   border: none;
   border-radius: 20px;
-  background: linear-gradient(to right, #3495eb, #87CEEB);
+  background: linear-gradient(to right, #3495eb, #3C97FF);
   color: white;
   text-decoration: none;
   transition: padding 0.2s; /* added padding transition */
