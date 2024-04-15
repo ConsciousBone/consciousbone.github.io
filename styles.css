@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to bottom right, #4e6bff, #172974);
+  background: linear-gradient(to bottom right, #4e6bff, #071b52) url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='honeycomb' x='0' y='0' width='60' height='52' patternUnits='userSpaceOnUse'%3E%3Cpolygon points='0,26 30,0 60,26 30,52' fill='white' /%3E%3Cpolygon points='30,0 60,26 30,52 0,26' fill='%23e0e0e0' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23honeycomb)' /%3E%3C/svg%3E");
 }
 
 .container {
