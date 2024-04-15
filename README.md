@@ -1,3 +1,2 @@
 # ConsciousBone website
-current status:
-- moving from carrd (personal) and glitch (sydia) to github pages
+yes, i know this could be better  
