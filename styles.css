@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background: linear-gradient(to bottom right, #4e6bff, #172974);
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #87CEEB, #FF69B4);
+  background: linear-gradient(to right, #3495eb, #87CEEB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -32,8 +32,8 @@ h1 {
 
 .line {
   border: none;
-  border-top: 2px solid #ccc; /* Adjusted thickness */
-  margin: 20px 0; /* Increased margin */
+  border-top: 2px solid #ccc;
+  margin: 20px 0;
 }
 
 p {
