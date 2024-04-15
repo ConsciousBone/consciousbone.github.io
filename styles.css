@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background-color: linear-gradient(to bottom right, #222222, #151515);
+  background: linear-gradient(to bottom right, #222222, #151515);
   border-radius: 15px;
   padding: 20px;
   text-align: center;
