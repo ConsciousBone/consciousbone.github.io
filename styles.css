@@ -1,3 +1,7 @@
+body {
+  font-family: Sans-Serif;
+}
+
 background: hsla(188, 65%, 43%, 1);
 
 background: linear-gradient(45deg, hsla(188, 65%, 43%, 1) 0%, hsla(198, 100%, 36%, 1) 33%, hsla(225, 56%, 44%, 1) 100%);
@@ -7,7 +11,3 @@ background: -moz-linear-gradient(45deg, hsla(188, 65%, 43%, 1) 0%, hsla(198, 100
 background: -webkit-linear-gradient(45deg, hsla(188, 65%, 43%, 1) 0%, hsla(198, 100%, 36%, 1) 33%, hsla(225, 56%, 44%, 1) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#27A3B6", endColorstr="#0080B6", GradientType=1 );
-
-body {
-  font-family: Sans-Serif;
-}
