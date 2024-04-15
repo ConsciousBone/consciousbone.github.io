@@ -9,6 +9,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+<<<<<<< HEAD
+=======
+  background-color: #f4f4f4;
+>>>>>>> parent of d4130e4 (blue bg??)
 }
 
 .box {
@@ -18,8 +22,17 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .title {
   background: linear-gradient(to right, #87ceeb, #ff69b4);
+=======
+.content {
+  padding: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #87CEEB, #FF69B4);
+>>>>>>> parent of d4130e4 (blue bg??)
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Arial, sans-serif;
@@ -27,10 +40,16 @@ body {
 }
 
 .line {
+<<<<<<< HEAD
   border: 1px solid #ccc;
   border-radius: 10px;
   width: 60%;
   margin: 20px auto;
+=======
+  border: none;
+  border-top: 2px solid #ccc; /* Adjusted thickness */
+  margin: 20px 0; /* Increased margin */
+>>>>>>> parent of d4130e4 (blue bg??)
 }
 
 .subtitle {
