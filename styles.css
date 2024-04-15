@@ -5,6 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   background: linear-gradient(to bottom right, #4e6bff, #172974);
+  font-family: Consolas, Arial, sans-serif;
 }
 
 .container {
@@ -28,6 +29,7 @@ body {
 
 h1 {
   margin: 0;
+  font-family: Consolas, Arial, sans-serif;
 }
 
 .line {
@@ -39,4 +41,19 @@ h1 {
 p {
   font-family: Consolas, Arial, sans-serif;
   color: white;
+}
+
+.gradient-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #3495eb, #87CEEB);
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #87CEEB, #3495eb);
 }
