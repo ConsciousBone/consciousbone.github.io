@@ -68,17 +68,8 @@ p {
   color: white;
   text-decoration: none;
   transition: padding 0.2s; /* added padding transition */
-  position: relative;
-  z-index: 1; /* Ensure button is above the placeholder */
 }
 
 .gradient-button:hover {
   padding: 15px 25px; /* slightly increased padding on hover */
-  z-index: 2; /* Ensure expanded button is above other buttons */
-}
-
-.gradient-button:hover + .placeholder {
-  display: inline-block; /* Show the placeholder on hover */
-  width: 122px; /* Set width equal to expanded button */
-  height: 0; /* Maintain layout space */
 }
