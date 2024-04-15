@@ -19,7 +19,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #87CEEB, #FF69B4);
+  background: linear-gradient(to right, #3495eb, #87CEEB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
