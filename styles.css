@@ -6,6 +6,7 @@ body {
   height: 100vh;
   background: linear-gradient(to bottom right, #4e6bff, #172974);
   font-family: Consolas, Arial, sans-serif;
+  text-shadow: 2px 2px 5px grey;
 }
 
 .container {
@@ -25,11 +26,13 @@ body {
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   font-family: Consolas, Arial, sans-serif;
+  text-shadow: 2px 2px 5px grey;
 }
 
 h1 {
   margin: 0;
   font-family: Consolas, Arial, sans-serif;
+  text-shadow: 2px 2px 5px grey;
 }
 
 .line {
@@ -41,6 +44,7 @@ h1 {
 p {
   font-family: Consolas, Arial, sans-serif;
   color: white;
+  text-shadow: 2px 2px 5px grey;
 }
 
 .gradient-button {
@@ -52,8 +56,9 @@ p {
   color: white;
   text-decoration: none;
   transition: background-color 0.3s;
+  text-shadow: 2px 2px 5px grey;
 }
 
 .gradient-button:hover {
-  background: linear-gradient(to right, #87CEEB, #3495eb);
+  padding: 12px 22px; /* slightly increased padding on hover */
 }
