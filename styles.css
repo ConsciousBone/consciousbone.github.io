@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background: linear-gradient(to bottom right, #222222, #151515);
+  background: linear-gradient(to bottom right, #252525, #151515);
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -45,6 +45,7 @@ p {
 
 .gradient-button {
   display: inline-block;
+  width: 150px; /* Fixed width */
   padding: 10px 20px;
   margin-right: 10px; /* Added margin between buttons */
   margin-bottom: 10px; /* Added margin below buttons */
