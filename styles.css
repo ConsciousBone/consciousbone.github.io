@@ -47,6 +47,7 @@ p {
   display: inline-block;
   padding: 10px 20px;
   margin-right: 10px; /* Added margin between buttons */
+  margin-bottom: 10px; /* Added margin below buttons */
   border: none;
   border-radius: 20px;
   background: linear-gradient(to right, #3495eb, #87CEEB);
