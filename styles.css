@@ -1,4 +1,8 @@
 body {
   font-family: Sans-Serif;
+}
+
+.center {
   text-align: center;
+  border: 3px solid green;
 }
