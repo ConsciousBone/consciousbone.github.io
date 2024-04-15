@@ -46,24 +46,14 @@ p {
 .gradient-button {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid transparent; /* Adding transparent border */
+  border: none;
   border-radius: 20px;
-  background: none; /* Removing background */
-  color: #3495eb; /* Setting text color */
+  background: linear-gradient(to right, #3495eb, #87CEEB);
+  color: white;
   text-decoration: none;
-  transition: border-color 0.3s; /* Adding transition for color and border-color */
+  transition: padding 0.2s; /* added padding transition */
 }
 
 .gradient-button:hover {
-  padding: 14px 24px; /* slightly increased padding on hover */
-  color: #87CEEB; /* Changing text color on hover */
-  border-color: #3495eb; /* Changing border color on hover */
-}
-
-.gradient-button:visited {
-  color: #3495eb; /* Setting text color for visited link */
-}
-
-.gradient-button:focus {
-  outline: none; /* Removing default focus outline */
+  padding: 15px 25px; /* slightly increased padding on hover */
 }
