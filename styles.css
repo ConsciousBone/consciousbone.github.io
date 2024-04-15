@@ -1,58 +1,42 @@
 body {
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #4e6bff, #071b52);
-}
-
-.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-<<<<<<< HEAD
-=======
-  background-color: #f4f4f4;
->>>>>>> parent of d4130e4 (blue bg??)
+  background: linear-gradient(to bottom right, #4e6bff, #172974);
 }
 
-.box {
-  background-color: #333;
-  border-radius: 20px;
+.container {
+  background-color: #404040;
+  border-radius: 15px;
   padding: 20px;
   text-align: center;
 }
 
-<<<<<<< HEAD
-.title {
-  background: linear-gradient(to right, #87ceeb, #ff69b4);
-=======
 .content {
   padding: 20px;
 }
 
 .gradient-text {
   background: linear-gradient(to right, #87CEEB, #FF69B4);
->>>>>>> parent of d4130e4 (blue bg??)
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Arial, sans-serif;
   font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
 }
 
 .line {
-<<<<<<< HEAD
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 60%;
-  margin: 20px auto;
-=======
   border: none;
-  border-top: 2px solid #ccc; /* Adjusted thickness */
-  margin: 20px 0; /* Increased margin */
->>>>>>> parent of d4130e4 (blue bg??)
+  border-top: 2px solid #ccc;
+  margin: 20px 0;
 }
 
-.subtitle {
-  color: white;
+p {
   font-family: Arial, sans-serif;
+  color: white;
 }
