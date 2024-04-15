@@ -11,7 +11,7 @@ body {
 @keyframes fadeInSlideUp {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* start position */
+    transform: translateY(50px); /* start position */
   }
   100% {
     opacity: 1;
@@ -24,8 +24,8 @@ body {
   border-radius: 15px;
   padding: 20px;
   text-align: center;
-  transform: translateY(20px); /* initially move the container down by 20px */
-  animation: fadeInSlideUp 2s ease-in-out forwards; /* apply animation */
+  transform: translateY(50px); /* initially move the container down by 20px */
+  animation: fadeInSlideUp 1.5s ease-in-out forwards; /* apply animation */
 }
 
 .content {
