@@ -45,7 +45,7 @@ p {
 
 .gradient-button {
   display: inline-block;
-  width: 150px; /* Fixed width */
+  width: 120px; /* Fixed width */
   padding: 10px 20px;
   margin-right: 10px; /* Added margin between buttons */
   margin-bottom: 10px; /* Added margin below buttons */
