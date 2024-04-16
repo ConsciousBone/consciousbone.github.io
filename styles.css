@@ -19,12 +19,23 @@ body {
   }
 }
 
+@keyframes fadeInSlideUpSmall {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* start position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* end position */
+  }
+}
+
 .container {
   background: linear-gradient(to bottom right, #252525, #151515);
   border-radius: 15px;
   padding: 20px;
   text-align: center;
-  transform: translateY(50px); /* initially move the container down by 20px */
+  transform: translateY(50px); /* initially move the container down by 50px */
   animation: fadeInSlideUp 1.5s ease-in-out forwards; /* apply animation */
 }
 
@@ -67,7 +78,9 @@ p {
   background: linear-gradient(to right, #3495eb, #3C97FF);
   color: white;
   text-decoration: none;
+  transform: translateY(20px); /* initially move the container down by 20px */
   transition: padding 0.2s; /* added padding transition */
+  animation: fadeInSlideUpSmall 1s ease-in-out forwards;
 }
 
 .gradient-button:hover {
