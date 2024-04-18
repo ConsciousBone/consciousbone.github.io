@@ -67,6 +67,11 @@ p {
   color: white;
 }
 
+a {
+  font-family: Consolas, Arial, sans-serif;
+  color: white;
+}
+
 .gradient-button {
   display: inline-block;
   width: 107px; /* Fixed width */
