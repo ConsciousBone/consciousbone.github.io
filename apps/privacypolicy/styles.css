@@ -1,1 +1,27 @@
+body {
+  font-family: Consolas, Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom right, #252525, #151515);
+  color: white;
+  height: 100vh; /* Make sure body covers the full viewport height */
+  margin: 0; /* Remove default margin */
+}
 
+
+.gradient-button {
+  display: inline-block;
+  width: 107px; /* Fixed width */
+  padding: 10px 20px;
+  margin-right: 10px; /* Added margin between buttons */
+  margin-bottom: 10px; /* Added margin below buttons */
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #3495eb, #3C97FF);
+  color: white;
+  text-decoration: none;
+  transition: padding 0.2s; /* added padding transition */
+}
+
+.gradient-button:hover {
+  padding: 15px 25px; /* slightly increased padding on hover */
+}
