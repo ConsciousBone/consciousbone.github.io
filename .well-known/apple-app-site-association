@@ -1,0 +1,15 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "<Team ID>.your.watchkitextension.identifier" ],
+             "components": [
+               {
+                  "/": "/flicktype/*",
+                  "comment": "Matches any URL whose path starts with /flicktype/"
+               }
+             ]
+           }
+       ]
+   }
+}
