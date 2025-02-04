@@ -2,7 +2,7 @@
   "applinks": {
       "details": [
            {
-             "appIDs": [ "<Team ID>.your.watchkitextension.identifier" ],
+             "appIDs": [ "com.kmorley.Searchino.watchkitapp" ],
              "components": [
                {
                   "/": "/flicktype/*",
