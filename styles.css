@@ -489,13 +489,3 @@ main {
     color: white;
   }
 }
-
-/* Fade animation */
-body {
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out;
-}
-
-body.fade-out {
-  opacity: 0;
-}
