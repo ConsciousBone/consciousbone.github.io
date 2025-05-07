@@ -1,66 +1,161 @@
 <!DOCTYPE html>
-
-<!--
-RIP javarock v4
-you will be missed
--->
-
 <html lang="en">
 <head>
-    <!-- Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
-  
-  <script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
-  <script type="text/javascript" charset="UTF-8">
-    document.addEventListener('DOMContentLoaded', function () {
-    cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"dark","language":"en_gb","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"ConsciousBone"});
-    });
-  </script>
-  
-  <!-- Google Analytics -->
-  <script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-9ZDHFS9JGF"></script>
-  <script type="text/plain" data-cookie-consent="tracking">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9ZDHFS9JGF');
-  </script>
-  <!-- end of Google Analytics-->
-  
-  <noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
-  
-  <!-- End Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta content="ConsciousBone - R" property="og:title" />
-  <meta content="no." property="og:description" />
-  <meta content="https://consciousb.one/r" property="og:url" />
-  <meta content="#3595FC" data-react-helmet="true" name="theme-color" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta content="ConsciousBone - Home" property="og:title" />
+  <meta content="ConsciousBone's website" property="og:description" />
+  <meta content="https://consciousb.one/" property="og:url" />
+  <meta content="#F4F4F4" name="theme-color" />
   <title>ConsciousBone - R</title>
-  <!--favicon start-->
+
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3595fc">
   <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="theme-color" content="#3595fc">
-  <!--favicon end-->
-  <link rel="stylesheet" href="/styles.css">
+  <meta name="theme-color" content="#f4f4f4">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Cookie Consent by FreePrivacyPolicy.com -->
+  <script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    document.addEventListener('DOMContentLoaded', function () {
+      cookieconsent.run({
+        "notice_banner_type": "simple",
+        "consent_type": "express",
+        "palette": "dark",
+        "language": "en_gb",
+        "page_load_consent_levels": ["strictly-necessary"],
+        "notice_banner_reject_button_hide": false,
+        "preferences_center_close_button_hide": false,
+        "page_refresh_confirmation_buttons": false,
+        "website_name": "ConsciousBone"
+      });
+    });
+  </script>
+
+  <!-- Google Analytics -->
+  <script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-9ZDHFS9JGF"></script>
+  <script type="text/plain" data-cookie-consent="tracking">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-9ZDHFS9JGF');
+  </script>
+  <noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
 </head>
 <body>
-  <div class="container">
-    <div class="content">
-      <h1><span class="gradient-text">R</span></h1>
-      <hr class="line">
-      <p><b>no.</b></p>
-      <p>just no.</p>
-      <p>its not how you spell it.</p>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="CB Logo transparent Black.svg" alt="Logo" />
+      </a>
+      <button id="menuToggle" class="menu-toggle">&#9776;</button>
+      <div class="nav-links" id="navLinks">
+        <div class="nav-highlight"></div>
+        <a href="/" class="nav-item active">Home</a>
+        <a href="/portfolio" class="nav-item">Portfolio</a>
+        <a href="/about" class="nav-item">About</a>
+      </div>
+    </nav>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <button id="menuClose" class="menu-close">&times;</button>
+      <a href="/" class="mobile-nav-item active">Home</a>
+      <a href="/portfolio" class="mobile-nav-item">Portfolio</a>
+      <a href="/about" class="mobile-nav-item">About</a>
     </div>
-  </div>
+
+    <div class="hero">
+      <div class="background"></div>
+      <div class="overlay">
+        <div class="hero-text">
+          <h1>R</h1>
+          <p>No. Just no. That's not how you spell it.</p>
+        </div>
+        <a href="https://pexels.com/" class="credit">Image from Pexels</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="apps-section">
+      <div class="apps-content">
+        <div class="apps-image">
+          <img src="searchino-watch-1.png" alt="Searchino app on an Apple Watch Ultra" />
+        </div>
+        <div class="apps-text-wrapper">
+          <div class="apps-text">
+            <h2>Apps</h2>
+            <div class="apps-row">
+              <p>
+                Take a look at my apps I have published! I mainly develop for iOS and watchOS using Swift and SwiftUI,
+                but I sometimes develop for Android using MIT App Inventor.
+              </p>
+              <a href="#apps" class="apps-button">See my apps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-section">
+      <div class="photo-content">
+        <div class="photo-image">
+          <img src="conwy-castle-1.png" alt="Conwy Castle Tower" />
+        </div>
+        <div class="photo-text-wrapper">
+          <div class="photo-text">
+            <h2>Photography</h2>
+            <div class="photo-row">
+              <p>
+                See my collections of photos I’ve taken from various trips around the UK.
+                I mainly use a Canon EOS 2000D, but sometimes shoot on an iPhone too.
+              </p>
+              <a href="#photography" class="photo-button">See my photos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="socials-section">
+      <div class="socials-container">
+        <div class="socials-image">
+          <img src="socials-phone-1.png" alt="Phone with social media app icons on the screen." />
+        </div>
+        <div class="socials-info">
+          <h2>Socials</h2>
+          <p>Check out the platforms where I share my projects, occasionally stream and upload videos, post photos I take, and hang out with the community.</p>
+          <div class="socials-buttons">
+            <a href="https://youtube.com/@consciousbone" class="social-button">YouTube</a>
+            <a href="https://www.twitch.tv/consciousbone" class="social-button">Twitch</a>
+            <a href="https://www.tiktok.com/@consciousbone" class="social-button">TikTok</a>
+            <a href="https://www.reddit.com/user/TheConsciousBone/" class="social-button">Reddit</a>
+            <a href="https://www.instagram.com/theconsciousbone" class="social-button">Instagram</a>
+            <a href="https://www.x.com/consciousbone" class="social-button">X</a>
+            <a href="https://discord.gg/WxcJ4k3" class="social-button">Discord</a>
+            <a href="https://github.com/ConsciousBone" class="social-button">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
