@@ -17,7 +17,7 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key>
-        <string>com.yourcompany.myapp</string>
+        <string>com.kmorley.JukeBoxClient</string>
         <key>bundle-version</key>
         <!-- This must match CFBundleVersion (the build number), not CFBundleShortVersionString -->
         <string>2</string>
