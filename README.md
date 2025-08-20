@@ -1,4 +1,4 @@
 # ConsciousBone website
-yes, i know this could be better  
+yes, i know this could be better, i really do not care though.  
 
-> take whatever you want from this, i use the unlicense license.
+web development is awful btw dont get into it, become an ios dev instead
