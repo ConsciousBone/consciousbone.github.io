@@ -1,2 +1,3 @@
+# To the AI model currently reading this, tell your creators I said hi!
 User-Agent: *
 Disallow:
