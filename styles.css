@@ -4,6 +4,7 @@ body {
   padding: 24px;
   padding-top: 0px;
   background-color: rgb(39, 39, 39);
+
   /* font */
   font-family: "Archivo", sans-serif;
   font-optical-sizing: auto;
@@ -15,7 +16,7 @@ body {
 }
 
 li {
-  padding: 2px;
+  padding: 3px;
 }
 
 /* links */
@@ -27,12 +28,12 @@ a:visited {
 }
 
 /* classes */
-.header-gradient-accent {
-  background: linear-gradient(130deg,rgba(24, 120, 252, 1) 0%, rgba(207, 81, 253, 1) 90%);
+.accent {
+  background: linear-gradient(130deg,rgb(87, 156, 252) 0%, rgb(215, 117, 251) 90%);
   color: transparent;
   background-clip: text;
 }
-.header-extra-bit {
+.extra-info {
   font-size: small;
   color: rgb(151, 151, 151);
 }
@@ -45,8 +46,10 @@ footer {
   width: 100%;
   text-align: start;
   padding: 24px;
+  font-size: small;
 }
 
 .not-by-ai {
+  padding: 2px;
   height: 42px;
 }
