@@ -55,7 +55,15 @@ a:visited {
 
 /* classes */
 .accent {
-  background: linear-gradient(130deg,rgb(87, 156, 252) 0%, rgb(215, 117, 251) 90%);
+  background: #579CFC;
+  background: -webkit-linear-gradient(130deg,rgba(87, 156, 252, 1) 0%, rgba(215, 117, 251, 1) 90%);
+  background: -moz-linear-gradient(130deg,rgba(87, 156, 252, 1) 0%, rgba(215, 117, 251, 1) 90%);
+  background: linear-gradient(130deg,rgba(87, 156, 252, 1) 0%, rgba(215, 117, 251, 1) 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr="#579CFC",
+    endColorstr="#D775FB",
+    GradientType=0
+  );
   color: transparent;
   -webkit-text-fill-color: transparent;
   background-clip: text;
