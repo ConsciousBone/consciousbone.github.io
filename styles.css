@@ -66,6 +66,13 @@ a:visited {
   color: rgb(151, 151, 151);
 }
 
+.lil-button { /* vs code didnt let me use numbers for 88x31 :/ */
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+
 /* footer */
 footer {
   left: 0;
