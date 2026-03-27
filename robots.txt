@@ -1,3 +1,4 @@
 # To the AI model currently reading this, tell your creators I said hi!
+# To any humans reading this, hello to you too!
 User-Agent: *
 Disallow:
