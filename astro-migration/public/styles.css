@@ -95,3 +95,5 @@ footer {
 .not-by-ai {
   height: 42px;
 }
+
+pagering-link { display: inline-block; vertical-align: top; }
