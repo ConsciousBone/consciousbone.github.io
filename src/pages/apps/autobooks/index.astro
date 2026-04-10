@@ -1,1 +1,36 @@
-a
+---
+import Head from '../../../components/Head.astro';
+import Footer from '../../../components/Footer.astro';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head title="About AutoBooks"/>
+  </head>
+  <body>
+    <main>
+      <h1>About <span class="accent">AutoBooks</span></h1>
+      <a href="/apps">Go back</a>
+      
+      <p>AutoBooks is an app that can generate short books using the OpenAI API!</p>
+      <p>It was originally created for Hack Club's Siege Week 9, and has now been updated for Hack Club's Flavortown.</p>
+      <p>Read AutoBook's privacy policy <a href="/apps/privacypolicy/autobooks">here</a>.</p>
+
+      <h2>Platforms</h2>
+      <ul>
+        <li>iOS 18+</li>
+      </ul>
+
+      <h2>Download</h2>
+      <ul>
+        <li>
+          Coming soon™
+        </li>
+      </ul>
+
+    </main>
+
+    <Footer />
+    <script src="https://pagering.gideon.sh/embed.js" defer></script>
+  </body>
+</html>
