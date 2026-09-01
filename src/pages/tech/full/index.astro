@@ -1,0 +1,27 @@
+---
+import Head from '../../../components/Head.astro';
+import Footer from '../../../components/Footer.astro';
+import TechList from '../../../components/TechList.astro';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head title="My tech" description="A list of all the tech I own!"/>
+  </head>
+  <body>
+    <main>
+      <h1>My <span class="accent">tech</span></h1>
+      <a href="/tech">Go back</a>
+
+      <p>This is a list of all items of tech I own!</p>
+      <p>Some stuff in here doesn't work, however they can be fixed with a simple repair so I'm counting them anyway.</p>
+      <p>This may not be everything, I don't have the time (or need) to go around my house and list everything off.</p>
+      <p class="extra-info">Last updated 31/08/2026.</p>
+        
+      <TechList version="full" />
+    </main>
+
+    <Footer />
+    <script src="https://pagering.gideon.sh/embed.js" defer></script>
+  </body>
+</html>

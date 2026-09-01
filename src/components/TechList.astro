@@ -1,0 +1,721 @@
+---
+type TechGroup = {
+  name: string;
+  items?: string[];
+  groups?: TechGroup[];
+};
+
+interface Props {
+  version?: 'full' | 'simple';
+  showControls?: boolean;
+}
+
+const { version = 'full', showControls = true } = Astro.props;
+
+const simpleCategories = new Set([
+  'Phones',
+  'Tablets',
+  'Computers',
+  'Game consoles',
+  'AR/VR/MR headsets',
+  'Cameras',
+  'iPods',
+  'Audio',
+]);
+
+const tech: TechGroup[] = [
+  {
+    "name": "Phones",
+    "groups": [
+      {
+        "name": "Apple",
+        "items": [
+          "Apple iPhone 2G",
+          "Apple iPhone 4",
+          "Apple iPhone 4s",
+          "Apple iPhone 5 (x2)",
+          "Apple iPhone 5c",
+          "Apple iPhone 5s",
+          "Apple iPhone 6s (x3)",
+          "Apple iPhone 6s Plus",
+          "Apple iPhone SE (1st generation) (x3)",
+          "Apple iPhone 7 (x2)",
+          "Apple iPhone X",
+          "Apple iPhone XS",
+          "Apple iPhone 12 Pro Max",
+          "Apple iPhone 13 mini",
+          "Apple iPhone 17 Pro (main)"
+        ]
+      },
+      {
+        "name": "Samsung",
+        "groups": [
+          {
+            "name": "Z series",
+            "items": [
+              "Samsung Galaxy Z Fold5",
+              "Samsung Galaxy Z Flip5",
+              "Samsung Galaxy Z Fold8 Ultra (secondary)"
+            ]
+          },
+          {
+            "name": "S series",
+            "items": [
+              "Samsung Galaxy S4",
+              "Samsung Galaxy S4 Mini",
+              "Samsung Galaxy S4 Zoom",
+              "Samsung Galaxy S5 Neo",
+              "Samsung Galaxy S7 edge"
+            ]
+          },
+          {
+            "name": "Note series",
+            "items": [
+              "Samsung Galaxy Note9",
+              "Samsung Galaxy Note10+ 5G"
+            ]
+          },
+          {
+            "name": "XCover series",
+            "items": [
+              "Samsung Galaxy XCover 5"
+            ]
+          },
+          {
+            "name": "A series",
+            "items": [
+              "Samsung Galaxy A3 (2016)",
+              "Samsung Galaxy A10",
+              "Samsung Galaxy A40",
+              "Samsung Galaxy A51"
+            ]
+          },
+          {
+            "name": "J series",
+            "items": [
+              "Samsung Galaxy J3 (2017)"
+            ]
+          },
+          {
+            "name": "Core series",
+            "items": [
+              "Samsung Galaxy Core Prime"
+            ]
+          },
+          {
+            "name": "Express series",
+            "items": [
+              "Samsung Galaxy Express 2"
+            ]
+          },
+          {
+            "name": "Feature phones",
+            "items": [
+              "Samsung SGH-D600",
+              "Samsung GT-E1150i",
+              "Samsung E2600"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Google",
+        "items": [
+          "Google/HTC Nexus One",
+          "Google/Samsung Nexus S",
+          "Google/Samsung Galaxy Nexus",
+          "Google/LG Nexus 4 (x2)",
+          "Google/LG Nexus 5 (x2)",
+          "Google/Motorola Nexus 6",
+          "Google/LG Nexus 5X",
+          "Google/Huawei Nexus 6P",
+          "Google Pixel 2",
+          "Google Pixel 3",
+          "Google Pixel 6a",
+          "Google Pixel 8 Pro"
+        ]
+      },
+      {
+        "name": "Sony",
+        "items": [
+          "Sony Ericsson K750i",
+          "Sony Ericsson W715",
+          "Sony Xperia tipo",
+          "Sony Xperia M2 (x2)"
+        ]
+      },
+      {
+        "name": "Huawei",
+        "items": [
+          "Huawei P20 (x2)"
+        ]
+      },
+      {
+        "name": "Microsoft",
+        "items": [
+          "Microsoft Lumia 435",
+          "Microsoft Lumia 640 LTE",
+          "Microsoft Lumia 950",
+          "Microsoft Surface Duo (1st generation)"
+        ]
+      },
+      {
+        "name": "Nokia",
+        "items": [
+          "Nokia 3310",
+          "Nokia 5130",
+          "Nokia 6303 classic",
+          "Nokia Lumia 610",
+          "Nokia G10"
+        ]
+      },
+      {
+        "name": "Motorola",
+        "items": [
+          "Motorola Flipout",
+          "Motorola GLEAM"
+        ]
+      },
+      {
+        "name": "HTC",
+        "items": [
+          "HTC Touch Pro",
+          "HTC/T-Mobile G1 (x2)",
+          "HTC Desire C"
+        ]
+      },
+      {
+        "name": "LG",
+        "items": [
+          "LG Spirit"
+        ]
+      },
+      {
+        "name": "BlackBerry",
+        "items": [
+          "BlackBerry Priv",
+          "BlackBerry KEYone"
+        ]
+      },
+      {
+        "name": "Nothing/CMF",
+        "items": [
+          "CMF Phone 1"
+        ]
+      },
+      {
+        "name": "Amazon",
+        "items": [
+          "Amazon Fire Phone"
+        ]
+      },
+      {
+        "name": "Razer",
+        "items": [
+          "Razer Phone 2"
+        ]
+      },
+      {
+        "name": "CAT",
+        "items": [
+          "CAT S22 Flip"
+        ]
+      },
+      {
+        "name": "Doogee",
+        "items": [
+          "Doogee S100"
+        ]
+      },
+      {
+        "name": "Wileyfox",
+        "items": [
+          "Wileyfox Spark+"
+        ]
+      },
+      {
+        "name": "Qin",
+        "items": [
+          "Qin F22"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tablets",
+    "groups": [
+      {
+        "name": "Apple",
+        "items": [
+          "Apple iPad (1st generation)",
+          "Apple iPad 2 (x2)",
+          "Apple iPad 3",
+          "Apple iPad mini 1 (x2)",
+          "Apple iPad Pro (1st generation) (12.9in)",
+          "Apple iPad Pro M4 (11in)"
+        ]
+      },
+      {
+        "name": "Samsung",
+        "items": [
+          "Samsung Galaxy Tab A9"
+        ]
+      },
+      {
+        "name": "Lenovo",
+        "items": [
+          "Lenovo Tab M10 (3rd Gen)"
+        ]
+      },
+      {
+        "name": "Amazon",
+        "items": [
+          "Amazon Fire 7 (5th generation)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Computers",
+    "groups": [
+      {
+        "name": "Apple",
+        "items": [
+          "Apple iMac (20in, Mid 2007)",
+          "Apple iMac (27in, Mid 2011)",
+          "Apple MacBook Pro 13in (Mid 2012)",
+          "Apple MacBook Air 13in (Early 2015)",
+          "Apple MacBook Pro 13in (2019)",
+          "Apple MacBook Pro 14in (M3 Max, 2023)",
+          "Apple Mac mini (M4, 2024)"
+        ]
+      },
+      {
+        "name": "Microsoft",
+        "items": [
+          "Microsoft Surface Book (1st generation)",
+          "Microsoft Surface Pro 7",
+          "Microsoft Surface Go 2",
+          "Microsoft Surface Laptop SE"
+        ]
+      },
+      {
+        "name": "Lenovo",
+        "items": [
+          "Lenovo ThinkPad T480s"
+        ]
+      },
+      {
+        "name": "ASUS",
+        "items": [
+          "ASUS ZenBook Duo (UX482E)",
+          "ASUS Zenbook 14 (UX3405CA)"
+        ]
+      },
+      {
+        "name": "Framework",
+        "items": [
+          "Framework Laptop 12"
+        ]
+      },
+      {
+        "name": "Raspberry Pi",
+        "items": [
+          "Raspberry Pi 3B",
+          "Raspberry Pi 4 (x2)",
+          "Raspberry Pi 5"
+        ]
+      },
+      {
+        "name": "Dell",
+        "items": [
+          "Dell OptiPlex 760"
+        ]
+      },
+      {
+        "name": "Misc",
+        "items": [
+          "Intel NUC (can't remember the model)",
+          "Custom built gaming PC (Ryzen 7 5800X3D, RTX 2070, 32GB DDR4, 1TB M.2 SSD, 2x 1TB HDDs)",
+          "FFF IRIE MAL-FWTVPCM1"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Smartwatches",
+    "groups": [
+      {
+        "name": "Apple",
+        "items": [
+          "Apple Watch (1st generation) (Sport, 42mm)",
+          "Apple Watch Series 2 (Nike+, 42mm)",
+          "Apple Watch Ultra 2"
+        ]
+      },
+      {
+        "name": "Samsung",
+        "items": [
+          "Samsung Galaxy Watch4 Classic (46mm)",
+          "Samsung Galaxy Watch6 Classic (47mm)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Game consoles",
+    "groups": [
+      {
+        "name": "Microsoft",
+        "items": [
+          "Microsoft Xbox 360",
+          "Microsoft Xbox One",
+          "Microsoft Xbox One S"
+        ]
+      },
+      {
+        "name": "Sony",
+        "items": [
+          "Sony PlayStation Vita (x3)",
+          "Sony PlayStation 4",
+          "Sony PlayStation 5",
+          "Sony PlayStation Portal"
+        ]
+      },
+      {
+        "name": "Nintendo",
+        "items": [
+          "Nintendo DS Lite",
+          "Nintendo New 3DS XL",
+          "Nintendo 2DS XL",
+          "Nintendo Switch",
+          "Nintendo Switch OLED (x2)",
+          "Nintendo Switch 2"
+        ]
+      },
+      {
+        "name": "Valve",
+        "items": [
+          "Valve Steam Deck (LCD)"
+        ]
+      },
+      {
+        "name": "Misc",
+        "items": [
+          "Analogue Pocket",
+          "Retroid Pocket 3",
+          "NVIDIA Shield Portable"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AR/VR/MR headsets",
+    "groups": [
+      {
+        "name": "Apple",
+        "items": [
+          "Apple Vision Pro (M2)"
+        ]
+      },
+      {
+        "name": "Oculus/Meta",
+        "items": [
+          "Oculus Quest 2",
+          "Meta Quest 3"
+        ]
+      },
+      {
+        "name": "HTC",
+        "items": [
+          "HTC Vive",
+          "HTC Vive Cosmos"
+        ]
+      },
+      {
+        "name": "Google",
+        "items": [
+          "Google Glass Explorer Edition (x2)",
+          "Google Daydream View"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cameras",
+    "groups": [
+      {
+        "name": "Canon",
+        "items": [
+          "Canon EOS 2000D",
+          "Canon EOS R50"
+        ]
+      },
+      {
+        "name": "Sony",
+        "items": [
+          "Sony Cyber-shot DSC-T77"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Audio",
+    "groups": [
+      {
+        "name": "Apple",
+        "items": [
+          "Apple EarPods (3.5mm/AUX connector)",
+          "Apple EarPods (Lightning connector)",
+          "Apple AirPods (1st generation) (x2)",
+          "Apple AirPods Pro 3",
+          "Apple AirPods Max (1st generation)"
+        ]
+      },
+      {
+        "name": "Samsung",
+        "items": [
+          "Samsung Galaxy Buds2 Pro",
+          "Samsung Galaxy Buds4 Pro"
+        ]
+      },
+      {
+        "name": "Sony",
+        "items": [
+          "Sony WH-1000XM5"
+        ]
+      },
+      {
+        "name": "Elgato",
+        "items": [
+          "Elgato Wave:3 (MK.1)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "iPods",
+    "items": [
+      "Apple iPod Video (5.5th generation)",
+      "Apple iPod Classic (6th generation)"
+    ],
+    "groups": [
+      {
+        "name": "iPod classic",
+        "items": [
+          "Apple iPod Video (5.5th generation)",
+          "Apple iPod Classic (6th generation)"
+        ]
+      },
+      {
+        "name": "iPod nano",
+        "items": [
+          "Apple iPod nano (1st generation)",
+          "Apple iPod nano (2nd generation)",
+          "Apple iPod nano (3rd generation)",
+          "Apple iPod nano (5th generation)",
+          "Apple iPod nano (6th generation)",
+          "Apple iPod nano (7th generation)"
+        ]
+      },
+      {
+        "name": "iPod shuffle",
+        "items": [
+          "Apple iPod Shuffle (2nd generation)",
+          "Apple iPod Shuffle (4th generation)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TVs/streaming boxes",
+    "groups": [
+      {
+        "name": "Sony",
+        "items": [
+          "Sony Bravia (can't remember the model) (x2)",
+          "Sony Bravia 8",
+          "Sony Bravia 8 II"
+        ]
+      },
+      {
+        "name": "Apple",
+        "items": [
+          "Apple TV (1st generation)",
+          "Apple TV 3",
+          "Apple TV 4K (can't remember which generation) (x3)"
+        ]
+      },
+      {
+        "name": "Amazon",
+        "items": [
+          "Amazon Fire TV Stick Lite",
+          "Amazon Fire TV Stick 4K Max"
+        ]
+      },
+      {
+        "name": "Google",
+        "items": [
+          "Google Chromecast (1st generation)",
+          "Google Chromecast Ultra"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Smart home",
+    "groups": [
+      {
+        "name": "Apple",
+        "items": [
+          "Apple HomePod (2nd generation)"
+        ]
+      },
+      {
+        "name": "Google",
+        "items": [
+          "Google Nest Hub"
+        ]
+      },
+      {
+        "name": "Lenovo",
+        "items": [
+          "Lenovo Smart Clock 2"
+        ]
+      },
+      {
+        "name": "Philips",
+        "items": [
+          "Philips Hue white and colour ambiance bulb (x2)",
+          "Philips Hue white and colour ambiance light strip plus",
+          "Philips Hue outdoor Impress wall lamp",
+          "Philips Hue Go (x2)",
+          "Philips Hue Play light bar (x2)",
+          "Philips Hue dimmer switch (1st generation)"
+        ]
+      },
+      {
+        "name": "IKEA",
+        "items": [
+          "IKEA TRADFRI bulb (x8)",
+          "IKEA ORMANAS LED strip (x2)",
+          "IKEA TRETAKT smart plug",
+          "IKEA TRADFRI motion sensor (x3)",
+          "IKEA VALLHORN motion sensor (x2)",
+          "IKEA SOMRIG shortcut button",
+          "IKEA TRADFRI shortcut button",
+          "IKEA STYRBAR remote control (x2)"
+        ]
+      },
+      {
+        "name": "Misc",
+        "items": [
+          "Home Assistant Connect ZBT-2",
+          "Sandstrom smart plug (x2)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3D printers",
+    "groups": [
+      {
+        "name": "Bambu Lab",
+        "items": [
+          "Bambu Lab A1"
+        ]
+      },
+      {
+        "name": "AnkerMake",
+        "items": [
+          "AnkerMake M5"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Misc",
+    "items": [
+      "Google Jamboard 55",
+      "Xiaomi Mi Computer Monitor Light Bar",
+      "Flipper Zero",
+      "Elgato Stream Deck (MK.1)",
+      "Elgato Stream Deck +"
+    ]
+  }
+];
+
+const categories = version === 'simple'
+  ? tech.filter((category) => simpleCategories.has(category.name))
+  : tech;
+---
+
+<div class="tech-list" data-tech-list>
+  {showControls && (
+    <div class="inline">
+      <button type="button" data-expand-all>Expand all</button>
+      <button type="button" data-collapse-all>Collapse all</button>
+    </div>
+  )}
+
+  {categories.map((category) => (
+    <details class="top-level">
+      <summary>{category.name}</summary>
+
+      {category.items && (
+        <ul>
+          {category.items.map((item) => <li>{item}</li>)}
+        </ul>
+      )}
+
+      {category.groups?.map((group) => (
+        <details>
+          <summary>{group.name}</summary>
+
+          {group.items && (
+            <ul>
+              {group.items.map((item) => <li>{item}</li>)}
+            </ul>
+          )}
+
+          {group.groups?.map((subgroup) => (
+            <details>
+              <summary>{subgroup.name}</summary>
+
+              {subgroup.items && (
+                <ul>
+                  {subgroup.items.map((item) => <li>{item}</li>)}
+                </ul>
+              )}
+            </details>
+          ))}
+        </details>
+      ))}
+    </details>
+  ))}
+</div>
+
+<script>
+  const initialiseTechLists = () => {
+    document.querySelectorAll<HTMLElement>('[data-tech-list]').forEach((root) => {
+      if (root.dataset.initialised === 'true') return;
+
+      const details = root.querySelectorAll('details');
+      const expandAll = root.querySelector<HTMLButtonElement>('[data-expand-all]');
+      const collapseAll = root.querySelector<HTMLButtonElement>('[data-collapse-all]');
+
+      expandAll?.addEventListener('click', () => {
+        details.forEach((detail) => detail.open = true);
+      });
+
+      collapseAll?.addEventListener('click', () => {
+        details.forEach((detail) => detail.open = false);
+      });
+
+      root.dataset.initialised = 'true';
+    });
+  };
+
+  initialiseTechLists();
+  document.addEventListener('astro:page-load', initialiseTechLists);
+</script>
