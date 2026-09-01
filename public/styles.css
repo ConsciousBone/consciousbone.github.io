@@ -123,8 +123,7 @@ button {
   cursor: pointer;
 }
 
-button:hover,
-button:focus-visible {
+button:hover, button:focus-visible {
   background: rgb(62, 62, 62);
   border: 2px solid transparent;
   background:
@@ -148,7 +147,6 @@ footer {
   text-align: start;
   font-size: small;
   margin-top: auto;
-  margin-bottom: 16em;
 }
 
 .not-by-ai {
