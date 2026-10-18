@@ -1,0 +1,68 @@
+---
+interface Props {
+  shootName?: string;
+  fileName?: string;
+  photoNumber?: string;
+}
+
+const {
+  shootName = "naturetrail",
+  fileName = "20261006-IMG_0017",
+  photoNumber = "1"
+} = Astro.props;
+---
+
+<style>
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  figure {
+    margin: 0%;
+    min-width: 0;
+  }
+
+  figcaption {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+</style>
+
+<figure>
+  <a
+    href={`/assets/photography/${shootName}/small/${fileName}.jpg`}
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src={`/assets/photography/${shootName}/small/${fileName}.jpg`}
+      alt={`Photo ${photoNumber} from ${shootName} shoot`}
+      loading="lazy"
+    />
+  </a>
+
+  <figcaption>
+    Photo {photoNumber} &bull;
+    <a
+      href={`/assets/photography/${shootName}/fullres/${fileName}.jpg`}
+      download
+    >
+      Download (full res)
+    </a>
+
+    &bull;
+
+    <a
+      href={`/assets/photography/${shootName}/small/${fileName}.jpg`}
+      download
+    >
+      Download (small)
+    </a>
+  </figcaption>
+</figure>

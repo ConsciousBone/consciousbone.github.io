@@ -1,0 +1,58 @@
+---
+import Head from '../../../components/Head.astro';
+import Footer from '../../../components/Footer.astro';
+import PhotoTile from '../../../components/PhotoTile.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head title="n a t u r e t r a i l" description="A collection of photos!" />
+  </head>
+  <body>
+    <main class="photo-page">
+      <h1><span class="accent">n a t u r e t r a i l</span></h1>
+      <a href="/photography">Go back</a>
+
+      <h2>About this shoot</h2>
+      <p>I accidentally left my shutter speed too slow while shooting handheld, took a picture, and saw the effect it created.</p>
+      <p>I then took this newfound inspiration to my back garden where I used my iPhone's torch and my R50 to create these images!</p>
+      
+      <h2>Gear used</h2>
+      <ul>
+        <li>Canon EOS R50</li>
+        <li>Canon RF-S 18-45mm F4.3-6.3 IS STM</li>
+        <li>iPhone 18 Pro</li>
+          <ul>
+            <li>Used as a torch.</li>
+          </ul>
+        <li>Adobe Lightroom (Version 9.6)</li>
+      </ul>
+
+      <h2>License</h2>
+      These images are licensed for use under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      
+      <h2>Photos</h2>
+      <p>Click a photo to view it in a new tab!</p>
+      <div class="photo-grid">
+        <PhotoTile fileName="20261006-IMG_0017" photoNumber='1'/>
+        <PhotoTile fileName="20261006-IMG_0021" photoNumber='2'/>
+        <PhotoTile fileName="20261006-IMG_0023" photoNumber='3'/>
+        <PhotoTile fileName="20261006-IMG_0024" photoNumber='4'/>
+        <PhotoTile fileName="20261006-IMG_0028" photoNumber='5'/>
+        <PhotoTile fileName="20261006-IMG_0030" photoNumber='6'/>
+        <PhotoTile fileName="20261006-IMG_0032" photoNumber='7'/>
+        <PhotoTile fileName="20261006-IMG_0035" photoNumber='8'/>
+        <PhotoTile fileName="20261006-IMG_0039" photoNumber='9'/>
+        <PhotoTile fileName="20261006-IMG_0040" photoNumber='10'/>
+        <PhotoTile fileName="20261006-IMG_0048" photoNumber='11'/>
+        <PhotoTile fileName="20261006-IMG_0050" photoNumber='12'/>
+      </div>
+
+      
+    </main>
+
+		<Footer />
+	  <script src="https://pagering.gideon.sh/embed.js" defer></script>
+  </body>
+</html>
